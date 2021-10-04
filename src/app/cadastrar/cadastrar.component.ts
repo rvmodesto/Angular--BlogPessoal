@@ -43,8 +43,8 @@ cadastrar(){
   } else{
     this.authService.cadastrar(this.user).subscribe((resp: User) => {
       this.user = resp
-      alert('Usuário cadastrado com sucesso!')
       this.router.navigate(['/entrar'])
+      alert('Usuário cadastrado com sucesso!')
     })
   }
 }

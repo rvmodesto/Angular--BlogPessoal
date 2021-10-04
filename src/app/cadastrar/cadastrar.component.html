@@ -1,10 +1,6 @@
 <div class="container-fluid">
-
     <div class="row">
-
-        <div class="col-md-6" id="img-bg">
-
-        </div>
+        <div class="col-md-6" id="img-bg"> </div>
 
         <div class="col-md-6 mt-5 mb-5" >
             <div class="row d-flex justify-content-center">
@@ -72,13 +68,13 @@
                         class="form-control" 
                         type="password" 
                         name="confirmSenha" 
-                        id="confirmSenha" placeholder="Confirme sua senha"
-                        [(ngModel)] = 'user.senha'/>
+                        id="confirmSenha" 
+                        placeholder="Confirme sua senha"
+                        [(ngModel)] = 'user.senha'>
                     </div>
 
                     <div class="form-group">
                         <label for="tipo">Tipo de Usuário</label>
-                        
                         <select class="form-control" name="tipo" id="tipo" (change)= 'tipoUser($event)'>
                             <option>Selecione o tipo de usuário:</option>
                             <option value="normal">Usuário Padrão</option>
@@ -87,9 +83,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center">
-                        <button 
-                        type="submit" 
-                        class="btn btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
+                        <button type="submit" class="btn btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
 
                         <button type="submit" class="btn btn-success" (click)= 'cadastrar()'>Cadastrar</button>
                     </div>
