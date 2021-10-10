@@ -16,15 +16,15 @@ export class AuthService {
   ) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://berakhot.herokuapp.com/usuarios/logar', userLogin)
+    return this.http.post<UserLogin>('https://berakhot.herokuapp.com/usuarios/logar', userLogin)
   }
 
   cadastrar(user: User): Observable<User> {
-    return this.http.post<User>('http://berakhot.herokuapp.com/usuarios/cadastrar', user)
+    return this.http.post<User>('https://berakhot.herokuapp.com/usuarios/cadastrar', user)
   }
 
   logado(){
-    let ok = false
+    let ok: boolean = false
 
     if (environment.token != ''){
       ok = true
