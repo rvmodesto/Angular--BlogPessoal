@@ -15,6 +15,12 @@ export class TemaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken() {
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    };
+  }
+
   getAllTemas(): Observable<Tema[]>{
     return this.http.get<Tema[]>('https://berakhot.herokuapp.com/tema', this.token)
   }
