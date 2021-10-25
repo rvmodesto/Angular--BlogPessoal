@@ -7,6 +7,7 @@ import { Postagem } from './../model/Postagem';
 import { Router } from '@angular/router';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-inicio',
@@ -32,7 +33,10 @@ export class InicioComponent implements OnInit {
     private authService: AuthService
   ) { }
 
+
   ngOnInit() {
+
+    this.authService.refreshToken();
 
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
