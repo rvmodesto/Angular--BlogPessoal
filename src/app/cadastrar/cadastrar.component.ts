@@ -12,7 +12,7 @@ import { AlertasService } from '../service/alertas.service';
 export class CadastrarComponent implements OnInit {
 
   user: User = new User();
-  confirmarSenha:string
+  confirmarSenha:string;
   tipoUsuario: string
 
   constructor(
